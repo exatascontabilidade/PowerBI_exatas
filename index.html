@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Exatas Contabilidade - Relatórios Power BI</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #011B49;
+      color: white;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    
+    img.logo {
+      width: 900px; /* ajuste conforme o tamanho da sua imagem */
+      margin-bottom: 70px;
+      border-radius: 10px;
+      background-color: #ffffff;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      max-width: 500px;
+      margin-bottom: 40px;
+    }
+
+    .button-container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .report-button {
+      background-color: #ffffff;
+      border: none;
+      color: rgb(0, 0, 0);
+      padding: 15px 30px;
+      font-size: 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .report-button:hover {
+      background-color: #008db5;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 20px;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <img src="logo-exatas.png" alt="Logo Exatas Contabilidade" class="logo">
+  <h1>Dashboard Gestta - Tarefas</h1>
+  <p>Selecione sua localidade.</p>
+
+  <div class="button-container">
+    <a class="report-button" href="/main/ARACAJU.html">Relatório Aracaju</a>
+    <a class="report-button" href="/main/TOBIAS.html">Relatório Tobias Barreto</a>
+  </div>
+
+  <footer>© 2025 Exatas Contabilidade. Todos os direitos reservados.</footer>
+
+</body>
+</html>
