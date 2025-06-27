@@ -5,51 +5,36 @@
     <title>Dashboard Power BI - Auto Reload</title>
     <style>
         html, body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow: hidden;
-            background-color: black;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
         }
+
+        .frame-wrapper {
+        width: 100%;     /* área visível desejada */
+        height: 100%;
+        overflow: hidden;  /* recorta o excesso do iframe */
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+
         iframe {
-            width: 100vw;
-            height: 100vh;
-            border: none;
-        }
+        margin-top: 5%;
+        width: 100%;
+        height: 109%;
+        position: flex;
+        justify-content: center;
+        align-items: center;
 
-        /* Cortinas para esconder partes do Power BI */
-        .hide-top, .hide-bottom, .hide-left, .hide-right {
-            position: fixed;
-            background-color: black;
-            z-index: 9998;
-        }
-
-        .hide-top {
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 0;
-        }
-
-        .hide-bottom {
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 60px;
-        }
-
-        .hide-left {
-            top: 0;
-            left: 0;
-            width: 55px;
-            height: 100%;
-        }
-
-        .hide-right {
-            top: 0;
-            right: 0;
-            width: 55px;
-            height: 100%;
+        border: none;
         }
 
         /* Mensagem de recarregamento */
@@ -97,12 +82,6 @@
 </head>
 <body>
 
-<!-- Cortinas -->
-<div class="hide-top"></div>
-<div class="hide-bottom"></div>
-<div class="hide-left"></div>
-<div class="hide-right"></div>
-
 <!-- Mensagem de recarregamento -->
 <div id="reloadMsg" class="reload-message">
     <p>🔄 RECARREGANDO</p>
@@ -112,12 +91,12 @@
 </div>
 
 <!-- Iframe do Power BI -->
-<iframe 
-    id="powerbi-frame"
-    title="Gestta - Tarefas"
-    src="https://app.powerbi.com/view?r=eyJrIjoiOWU4ODkyOWMtMzI2OC00YjFmLWFhMmEtNGJhNDVjZTNiNzZkIiwidCI6IjUzNzQxMzA4LTVkZGItNDc2YS1iNjc1LTdlNTYwNjcwNzVmMSJ9"
-    allowfullscreen>
-</iframe>
+<div class="frame-wrapper">
+    <iframe 
+        src="https://app.powerbi.com/view?r=eyJrIjoiNmY2MGI5MjUtY2ZjZS00Yzc2LWE4MGMtZDM3MTA5MWYxMjNkIiwidCI6IjUzNzQxMzA4LTVkZGItNDc2YS1iNjc1LTdlNTYwNjcwNzVmMSJ9" 
+        allowfullscreen="true">
+    </iframe>
+</div>
 
 <!-- Script -->
 <script>
